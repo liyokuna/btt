@@ -5,11 +5,16 @@
     <hr class="my-4">
       <div class="input-group">
         <div class="input-group-prepend">
-          <span class="input-group-text" id="basic-addon1">@</span>
+          <span class="input-group-text" id="mail-addon">@</span>
         </div>
-        <input type="text" class="form-control" placeholder="{{ 'e-mail' | translate }}" attr.aria-label="{{ 'e-mail' | translate }}" aria-describedby="basic-addon1">
+        <input type="text" class="form-control" placeholder="{{ 'e-mail' | translate }}" attr.aria-label="{{ 'e-mail' | translate }}" aria-describedby="mail-addon">
       </div>
   </div>
 </div>
 
-<div class="fixed-bottom">Next</div>
+
+<div class="fixed-bottom">
+  <div class="d-flex justify-content-center">
+    <a href="/tweets" class="btn btn-light btn-sm effect" role="button" attr.aria-label="{{ 'next' | translate }}" >{{ 'next' | translate }}</a>
+  </div>
+</div>

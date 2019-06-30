@@ -15,3 +15,24 @@ h1 {
 .bg-grey {
 	background-color: #e9ecef;
 }
+
+/* Safari 4.0 - 8.0 */
+@-webkit-keyframes effect {
+	from {background-color: #f8f9fa;}
+	to {background-color: #111213;}
+}
+  
+/* Standard syntax */
+@keyframes example {
+	from {background-color: #f8f9fa;}
+	to {background-color: #111213;}
+}
+
+.effect {
+	-webkit-animation-name: effect; /* Safari 4.0 - 8.0 */
+	-webkit-animation-duration: 4s; /* Safari 4.0 - 8.0 */
+	-webkit-animation-iteration-count: infinite;
+  	animation-name: effect;
+	animation-duration: 4s;
+	animation-iteration-count: infinite;
+}

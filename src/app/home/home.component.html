@@ -1,13 +1,15 @@
 <div class="bg-grey">
   <div class="center">
     <h1 class="display-4">Black Tech Twitter</h1>
-    <p class="lead">Let's get together !</p>
+    <p class="lead">{{ 'letgettogether' | translate }} !</p>
     <hr class="my-4">
       <div class="input-group">
         <div class="input-group-prepend">
           <span class="input-group-text" id="basic-addon1">@</span>
         </div>
-        <input type="text" class="form-control" placeholder="E-mail address" aria-label="E-mail address" aria-describedby="basic-addon1">
+        <input type="text" class="form-control" placeholder="{{ 'e-mail' | translate }}" attr.aria-label="{{ 'e-mail' | translate }}" aria-describedby="basic-addon1">
       </div>
   </div>
 </div>
+
+<div class="fixed-bottom">Next</div>

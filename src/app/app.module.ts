@@ -11,6 +11,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { TwPageComponent } from './twitter-page/tw-page.component';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
+import { TwitterService } from './services/twitter-service.service';
 
 // AoT requires an exported function for factories
 export function HttpLoaderFactory(http: HttpClient) {
@@ -36,7 +37,7 @@ export function HttpLoaderFactory(http: HttpClient) {
     }),
     NgbModule
   ],
-  providers: [],
+  providers: [TwitterService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

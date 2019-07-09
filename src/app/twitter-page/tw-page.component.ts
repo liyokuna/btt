@@ -16,12 +16,8 @@ export class TwPageComponent implements OnInit {
   constructor(private http: HttpClient, private ttservice: TwitterService) {}
 
   ngOnInit() {
-    this.ttservice.authorization();
-    console.log('test');
-    var headers = new HttpHeaders();
-    var searchval = 'query=' + this.searchQuery;
-    headers.append('content-type', 'application/X-www-form-urlencoded;charset=UTF-8');
-    this.http.post('http://localhost:3000/search', searchval, { headers: headers}).subscribe((res) => {
+    this.searchQuery;
+    this.ttservice.search(this.searchQuery).subscribe((res) => {
       console.log(res);
     });
   }

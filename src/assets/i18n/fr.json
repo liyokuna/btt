@@ -1,8 +1,12 @@
 {
     "speakers": "Conférencier",
+    "btt": "# Black Tech Twitter",
+    "jobs": "Offre d'emploi",
+    "conf": "Conférences Tech",
     "tweets": "Tweets",
     "blog":"Blog",
     "letgettogether": "Réunissons-nous",
     "e-mail": "Adresse mèl",
-    "next":"Suivant"
+    "next":"Suivant",
+    "profile": "Profile"
 }

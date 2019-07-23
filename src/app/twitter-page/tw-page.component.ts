@@ -9,7 +9,7 @@ import { TwitterService } from '../services/twitter-service.service';
   styleUrls: ['./tw-page.component.scss']
 })
 export class TwPageComponent implements OnInit {
-  tweets;
+  loading = true;
   checkboxGroupForm: FormGroup;
   title = 'Black Tech on Twitter';
   searchQuery = '##BlackTechPipeline';
@@ -26,6 +26,7 @@ export class TwPageComponent implements OnInit {
   ngOnInit() {
     this.ttservice.search(this.searchQuery).subscribe((res) => {
       this.tweetsdata = res.data;
+      this.loading = false;
     });
   }
   onChange() {

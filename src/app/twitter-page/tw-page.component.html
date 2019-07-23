@@ -19,9 +19,14 @@
 <br>
 <div class="container-fluid">
     <div class="row">
+      <div *ngIf="loading; else loaded">
+        Loading...
+      </div>
+      <ng-template #loaded>
         <div *ngFor="let item of tweetsdata" class="col">
             <div class="card bg-dark" style="width: 18rem;">
-              <img class="card-img-top" style= {width:10px,height:10px;} src={{item.user.profile_image_url}}>
+              <img class="card-img-top" src={{item.user.profile_image_url}}>
+            </div>
             <div class="card-body">
                 <h5 class="card-title">{{item.user.name}}</h5>
                 <hr>
@@ -33,5 +38,6 @@
                 </div>
             </div>
         </div>
+      </ng-template>
     </div>
 </div>

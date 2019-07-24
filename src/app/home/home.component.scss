@@ -1,3 +1,24 @@
 .panelBack {
 	background-color: #e9ecef;
 }
+
+.form-control:focus {
+    color: #000000 !important;
+	background-color: #ced4da !important;
+	border: unset !important;
+    border-bottom: 1px solid !important;
+    border-color: #343a40 !important;
+    box-shadow: 0 0.2rem 0.2rem 0 #343a40 !important;
+}
+
+.form-control {
+	border: unset !important;
+    border-bottom: 1px solid #ced4da !important;
+    border-radius: unset !important;
+}
+.input-group-text {
+	background-color: unset !important;
+	border: unset !important;
+    border-bottom: 1px solid #ced4da !important;
+    border-radius: unset !important;
+}

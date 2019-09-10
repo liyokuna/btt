@@ -13,8 +13,16 @@ export class TwitterService {
 
   constructor(private http: HttpClient) { }
 
-  search (val: string) {
+  search(val: string) {
     return this.http.post<TwitterResponse>(`http://localhost:3000/search`, {val});
+  }
+
+  getRepo() {
+    return this.http.get(`http://localhost:3000/repo`);
+  }
+
+  getSpeakers() {
+    return this.http.get(`http://localhost:3000/speaker`);
   }
 
 }

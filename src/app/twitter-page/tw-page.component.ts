@@ -12,7 +12,7 @@ export class TwPageComponent implements OnInit {
   loading = true;
   checkboxGroupForm: FormGroup;
   title = 'Black Tech on Twitter';
-  searchQuery = '##BlackTechPipeline';
+  searchQuery = '#BlackTechPipeline';
   tweetsdata: any;
 
   constructor(private http: HttpClient, private ttservice: TwitterService, private formBuilder: FormBuilder) {

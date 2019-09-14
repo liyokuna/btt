@@ -10,8 +10,12 @@ import { TwitterService } from './services/twitter-service.service';
 })
 export class AppComponent {
   title = 'black-tech-twitter';
+  click: boolean = false;
   constructor(translate: TranslateService, private http: HttpClient, private ttservice: TwitterService) {
     translate.setDefaultLang('en');
     translate.use('en');
+  }
+  ToggleClass() {
+    this.click =!this.click;
   }
 }

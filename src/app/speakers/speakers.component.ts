@@ -12,7 +12,7 @@ export class SpeakersComponent implements OnInit {
 
   ngOnInit() {
     this.ttservice.getSpeakers().subscribe((res) => {
-      console.log('launched');
+      console.log(res);
     });
   }
 

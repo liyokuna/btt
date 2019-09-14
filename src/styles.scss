@@ -102,3 +102,42 @@ h1 {
 			opacity: 1;
 	}
 }
+
+@keyframes noise-anim {
+	$steps:20;
+	@for $i from 0 through $steps{
+		#{percentage($i*(1/$steps))}{
+			clip: rect(random(100)+px,9999px, random(100)+px,0);
+		}
+	}
+}
+@keyframes noise-anim-2 {
+	$steps:20;
+	@for $i from 0 through $steps{
+		#{percentage($i*(1/$steps))}{
+			clip: rect(random(100)+px,9999px, random(100)+px,0);
+		}
+	}
+}
+.glitch:after {
+	content:attr(data-text);
+	position: absolute;
+	left:2px;
+	text-shadow: -1px 0 rgba(66, 3, 3, 0.692);
+	color: #343a40;
+  	background: white;
+	overflow: hidden;
+	clip:rect(0,900px,0,0);
+	animation:noise-anim 2s infinite linear alternate-reverse;
+}
+.glitch:before {
+	content:attr(data-text);
+	position: absolute;
+	left:-2px;
+	text-shadow: 1px 0 rgba(2, 2, 83, 0.89);
+	color: #343a40;
+  	background: white;
+	overflow: hidden;
+	clip:rect(0,900px,0,0);
+	animation:noise-anim-2 3s infinite linear alternate-reverse;
+}

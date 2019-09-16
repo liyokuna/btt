@@ -9,11 +9,19 @@ import { TwitterService } from '../services/twitter-service.service';
 export class HomeComponent implements OnInit {
 
   constructor(private ttservice: TwitterService) { }
-
+  click: boolean = false;
   ngOnInit() {
     this.ttservice.getRepo().subscribe((res) => {
       console.log('launched');
     });
+  }
+
+  focusIn() {
+    this.click =!this.click;
+  }
+
+  focusOut() {
+    this.click =!this.click;
   }
 
 }

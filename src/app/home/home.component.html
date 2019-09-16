@@ -1,12 +1,12 @@
 <div class="bg-grey">
   <div class="center">
-    <h1 class="display-4 glitch" data-text="Black Tech Twitter">Black Tech Twitter</h1>
+    <h1 class="display-4 glitch" data-text="Black Tech">Black Tech Twitter</h1>
     <p class="lead">{{ 'letgettogether' | translate }} !</p>
-      <div class="input-group">
+      <div [ngClass]="click ? 'input-group border-span' : 'input-group'">
         <div class="input-group-prepend">
           <span class="input-group-text" id="mail-addon">@</span>
         </div>
-        <input type="text" class="form-control" placeholder="{{ 'e-mail' | translate }}" attr.aria-label="{{ 'e-mail' | translate }}" aria-describedby="mail-addon">
+        <input type="text" (focus)= "focusIn()" (focusout)= "focusOut()" class="form-control" placeholder="{{ 'e-mail' | translate }}" attr.aria-label="{{ 'e-mail' | translate }}" aria-describedby="mail-addon">
       </div>
   </div>
 </div>

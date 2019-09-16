@@ -60,7 +60,6 @@ h1 {
 	.logo {
 	  width: 100px;
 	  height: 100px;
-	  //background: url(./assets/group.png) center center no-repeat; 
 	}
 }
 
@@ -123,7 +122,7 @@ h1 {
 	content:attr(data-text);
 	position: absolute;
 	left:2px;
-	text-shadow: -1px 0 rgba(66, 3, 3, 0.692);
+	text-shadow: -1px 0 #212529;
 	color: #343a40;
   	background: white;
 	overflow: hidden;
@@ -134,7 +133,7 @@ h1 {
 	content:attr(data-text);
 	position: absolute;
 	left:-2px;
-	text-shadow: 1px 0 rgba(2, 2, 83, 0.89);
+	text-shadow: 1px 0 #212529;
 	color: #343a40;
   	background: white;
 	overflow: hidden;

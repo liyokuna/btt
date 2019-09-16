@@ -1,3 +1,4 @@
+$dark-bg: rgba(#fff, .5);
 .navbar-toggler-icon-click {
     display: inline-block;
     width: 1.5em;
@@ -9,5 +10,5 @@
 }
 
 .navbar-toggler-icon-click {
-    background-image: url("data:image/svg+xml,%3csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3e%3cpath stroke='%23adb5bd' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7L22 23 M4 23L22 7'/%3e%3c/svg%3e");
+    background-image: url("data:image/svg+xml,%3csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3e%3cpath stroke='#{$dark-bg}' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M6 7L25 23 M6 23L25 7'/%3e%3c/svg%3e");
 }

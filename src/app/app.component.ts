@@ -16,6 +16,6 @@ export class AppComponent {
     translate.use('en');
   }
   ToggleClass() {
-    this.click =!this.click;
+    this.click =!this.click
   }
 }

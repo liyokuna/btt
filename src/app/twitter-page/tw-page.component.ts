@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, HostListener } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { FormBuilder, FormGroup } from '@angular/forms';
 import { TwitterService } from '../services/twitter-service.service';
@@ -10,6 +10,7 @@ import { TwitterService } from '../services/twitter-service.service';
 })
 export class TwPageComponent implements OnInit {
   loading = true;
+  showScroll = false;
   checkboxGroupForm: FormGroup;
   title = 'Black Tech on Twitter';
   searchQuery = '#BlackTechPipeline';
@@ -71,6 +72,19 @@ export class TwPageComponent implements OnInit {
       this.ttservice.search(this.searchQuery).subscribe((res) => {
         this.tweetsdata = res.data;
       });
+    }
+  }
+
+  public ScrollToTop() {
+    window.scrollTo({top: 0, behavior: 'smooth'});
+  }
+
+  @HostListener('window:scroll', [])
+  public onWindowScroll() {
+    if(document.documentElement.scrollTop > window.innerHeight) {
+      this.showScroll = true;
+    } else {
+      this.showScroll = false;
     }
   }
 }

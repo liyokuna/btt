@@ -31,37 +31,38 @@ export class TwPageComponent implements OnInit {
     });
   }
   onChange() {
-    if( this.checkboxGroupForm.value.btt) {
+    if( this.checkboxGroupForm.value.btt && !this.checkboxGroupForm.value.jobs && !this.checkboxGroupForm.value.conf) {
+      console.log(this.checkboxGroupForm.value.btt);
       this.searchQuery = '#BlackTechTwitter';
       this.ttservice.search(this.searchQuery).subscribe((res) => {
         this.tweetsdata = res.data;
       });
     }
-    if( this.checkboxGroupForm.value.jobs) {
+    if( this.checkboxGroupForm.value.jobs && !this.checkboxGroupForm.value.btt && !this.checkboxGroupForm.value.conf) {
       this.searchQuery = '#Jobs';
       this.ttservice.search(this.searchQuery).subscribe((res) => {
         this.tweetsdata = res.data;
       });
     }
-    if( this.checkboxGroupForm.value.conf) {
+    if( this.checkboxGroupForm.value.conf && !this.checkboxGroupForm.value.btt && !this.checkboxGroupForm.value.jobs) {
       this.searchQuery = '#Conference';
       this.ttservice.search(this.searchQuery).subscribe((res) => {
         this.tweetsdata = res.data;
       });
     }
-    if( this.checkboxGroupForm.value.conf && this.checkboxGroupForm.value.jobs) {
+    if( this.checkboxGroupForm.value.conf && this.checkboxGroupForm.value.jobs && !this.checkboxGroupForm.value.btt) {
       this.searchQuery = '#Conference #Jobs';
       this.ttservice.search(this.searchQuery).subscribe((res) => {
         this.tweetsdata = res.data;
       });
     }
-    if( this.checkboxGroupForm.value.btt && this.checkboxGroupForm.value.jobs) {
+    if( this.checkboxGroupForm.value.btt && this.checkboxGroupForm.value.jobs && !this.checkboxGroupForm.value.conf) {
       this.searchQuery = '#BlackTechTwitter #Jobs';
       this.ttservice.search(this.searchQuery).subscribe((res) => {
         this.tweetsdata = res.data;
       });
     }
-    if( this.checkboxGroupForm.value.btt && this.checkboxGroupForm.value.conf) {
+    if( this.checkboxGroupForm.value.btt && this.checkboxGroupForm.value.conf && !this.checkboxGroupForm.value.jobs) {
       this.searchQuery = '#BlackTechTwitter #Conference';
       this.ttservice.search(this.searchQuery).subscribe((res) => {
         this.tweetsdata = res.data;

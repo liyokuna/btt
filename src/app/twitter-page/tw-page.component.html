@@ -28,21 +28,21 @@
     </div>
     <ng-template #loaded>
       <div class="row fadeInEffect">
-        <div *ngFor="let item of tweetsdata" class="col" #loaded>
-            <div class="card bg-dark" style="width: 15rem;">
-              <img class="card-img-top" src={{item.user.profile_image_url}}>
-            <div class="card-body">
-                <h5 class="card-title">{{item.user.name}}</h5>
-                <hr>
-                <p class="card-text">
-                    {{item.text}}
-                </p>
-                <div class="card-action">
-                  <a href="https://twitter.com/{{item.user.screen_name}}" class="btn btn-info">{{ 'profile' | translate }}</a>
+            <div *ngFor="let item of tweetsdata" class="col" #loaded>
+                <div class="card bg-dark" style="width: 15rem;">
+                  <img class="card-img-top" src={{item.user.profile_image_url}}>
+                <div class="card-body">
+                    <h5 class="card-title">{{item.user.name}}</h5>
+                    <hr>
+                    <p class="card-text">
+                        {{item.text}}
+                    </p>
+                    <div class="card-action">
+                      <a href="https://twitter.com/{{item.user.screen_name}}" class="btn btn-info">{{ 'profile' | translate }}</a>
+                    </div>
                 </div>
             </div>
-        </div>
-      </div>
+          </div>
     </div>
     </ng-template>
 </div>

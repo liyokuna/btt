@@ -99,3 +99,7 @@ $dark-bg: rgba(#fff, .5);
 .scroll-up-icon {
     background-image: url("data:image/svg+xml,%3csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3e%3cpath stroke='#{$dark-bg}' stroke-width='3' stroke-linecap='round' stroke-miterlimit='10' d='M10 10L15 1 M15 1L20 10 M15 1L15 20'/%3e%3c/svg%3e");
 }
+
+hr {
+    border-top: 1px solid white !important;
+}

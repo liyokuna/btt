@@ -7,7 +7,7 @@ import { TwitterService } from '../services/twitter-service.service';
   styleUrls: ['./home.component.scss']
 })
 export class HomeComponent {
-
+  title = "Black Techies Twitter";
   click: boolean;
   constructor(private ttservice: TwitterService) {
     this.click = false;

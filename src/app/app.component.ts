@@ -9,7 +9,7 @@ import { TwitterService } from './services/twitter-service.service';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'black-tech-twitter';
+  title = 'Btt';
   click: boolean;
   constructor(translate: TranslateService, private http: HttpClient, private ttservice: TwitterService) {
     translate.setDefaultLang('en');

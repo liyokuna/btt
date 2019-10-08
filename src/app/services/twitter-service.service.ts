@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { HttpClient, HttpHeaders } from '@angular/common/http';
+import { HttpClient } from '@angular/common/http';
 
 export interface TwitterResponse {
   data: any;
@@ -7,6 +7,7 @@ export interface TwitterResponse {
 }
 
 export interface BttResponse {
+  success: any;
   data: any;
 }
 

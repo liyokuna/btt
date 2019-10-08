@@ -42,7 +42,6 @@ export class SpeakersComponent implements OnDestroy, AfterViewInit {
 
       this.ttservice.getSpeakers().subscribe((res) => {
         polygonSeries.data = res.data;
-        console.log(res.data);
       });
 
       const polygonTemplate = polygonSeries.mapPolygons.template;

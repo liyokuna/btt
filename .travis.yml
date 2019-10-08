@@ -1,0 +1,18 @@
+dist: trusty
+sudo: false
+language: node_js
+node_js:
+- 10.9.0
+addons:
+  chrome: stable
+cache:
+  directories:
+  - "./node_modules"
+install:
+- npm install
+jobs:
+  include:
+  - stage: Test Library
+    script:
+    - npm run lint
+    - npm run test

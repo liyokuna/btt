@@ -21,7 +21,8 @@ describe('TwitterService', () => {
         expect(value.success).toBeTruthy();
         done();
     });
-  }});
+  };
+});
 
   it('should retrieve tweets', () => {
     (done: DoneFn) => {
@@ -30,6 +31,7 @@ describe('TwitterService', () => {
         expect(value.data).toBeTruthy();
         done();
       });
-  }});
+  };
+});
 
 });

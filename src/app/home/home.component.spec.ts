@@ -43,8 +43,8 @@ describe('HomeComponent', () => {
   });
 
   it('should render title Black Techies Twitter', () => {
-    const fixture = TestBed.createComponent(HomeComponent);
-    fixture.detectChanges();
+    const fix = TestBed.createComponent(HomeComponent);
+    fix.detectChanges();
     const compiled = fixture.debugElement.nativeElement;
     expect(compiled.querySelector('h1').textContent).toContain('Black Techies Twitter');
   });

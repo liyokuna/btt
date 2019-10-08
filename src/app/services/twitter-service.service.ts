@@ -7,7 +7,7 @@ export interface TwitterResponse {
 }
 
 export interface BttResponse {
-  data:any
+  data: any;
 }
 
 @Injectable({

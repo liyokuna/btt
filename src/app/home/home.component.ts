@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { TwitterService } from '../services/twitter-service.service';
 
 @Component({
@@ -6,22 +6,19 @@ import { TwitterService } from '../services/twitter-service.service';
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.scss']
 })
-export class HomeComponent implements OnInit {
+export class HomeComponent {
 
-  constructor(private ttservice: TwitterService) { }
-  click: boolean = false;
-  ngOnInit() {
-    this.ttservice.getRepo().subscribe((res) => {
-      console.log('launched');
-    });
+  click: boolean;
+  constructor(private ttservice: TwitterService) {
+    this.click = false;
   }
 
   focusIn() {
-    this.click =!this.click;
+    this.click = ! this.click;
   }
 
   focusOut() {
-    this.click =!this.click;
+    this.click = ! this.click;
   }
 
 }

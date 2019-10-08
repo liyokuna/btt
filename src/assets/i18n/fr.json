@@ -1,5 +1,5 @@
 {
-    "speakers": "Conférencier",
+    "speakers": "Conférenciers",
     "btt": "# Black Tech Twitter",
     "jobs": "Offre d'emploi",
     "conf": "Conférences Tech",
@@ -9,5 +9,6 @@
     "e-mail": "Adresse mèl",
     "next":"Suivant",
     "profile": "Profile",
+    "nospeakers":"Il n'y a pas de conférenciers dans cette région.",
     "search": "Recherche"
 }

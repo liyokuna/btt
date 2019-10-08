@@ -6,6 +6,10 @@ export interface TwitterResponse {
   resp: any;
 }
 
+export interface BttResponse {
+  data:any
+}
+
 @Injectable({
   providedIn: 'root'
 })
@@ -22,7 +26,7 @@ export class TwitterService {
   }
 
   getSpeakers() {
-    return this.http.get(`http://localhost:3000/speaker`);
+    return this.http.get<BttResponse>(`http://localhost:3000/speaker`);
   }
 
 }

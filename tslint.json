@@ -61,6 +61,7 @@
       "single"
     ],
     "trailing-comma": false,
+    "no-unused-expression": false,
     "no-output-on-prefix": true,
     "no-inputs-metadata-property": true,
     "no-outputs-metadata-property": true,

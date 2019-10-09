@@ -1,4 +1,4 @@
-# BlackTechiesTwitter
+# [BlackTechiesTwitter](https://btt.netlify.com/)
 
 This project is linked to the black tech twitter [post](https://twitter.com/liyokuna/status/1069342369227644929).
 The aim of the project is to display black speakers registered on the [readme](https://github.com/samanthabretous/black-speakers-in-tech) managed by [Samantha Bretous](https://twitter.com/samanthabretous) and also to retrieve tweets that mention black tech twitter or black tech pipeline hashtag.

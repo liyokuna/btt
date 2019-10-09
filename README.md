@@ -1,6 +1,9 @@
-# BlackTechTwitter
+# BlackTechiesTwitter
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.3.8.
+This project is linked to the black tech twitter [post](https://twitter.com/liyokuna/status/1069342369227644929).
+The aim of the project is to display black speakers registered on the [readme](https://github.com/samanthabretous/black-speakers-in-tech) managed by [Samantha Bretous](https://twitter.com/samanthabretous) and also to retrieve tweets that mention black tech twitter or black tech pipeline hashtag.
+
+Any improvements are welcomed, do a PR !
 
 ## Development server
 

@@ -19,15 +19,15 @@ export class TwitterService {
   constructor(private http: HttpClient) { }
 
   search(val: string) {
-    return this.http.post<TwitterResponse>(`http://localhost:3000/search`, {val});
+    return this.http.post<TwitterResponse>(`https://btt-bo.herokuapp.com/search`, {val});
   }
 
   getRepo() {
-    return this.http.get(`http://localhost:3000/repo`);
+    return this.http.get(`https://btt-bo.herokuapp.com/repo`);
   }
 
   getSpeakers() {
-    return this.http.get<BttResponse>(`http://localhost:3000/speaker`);
+    return this.http.get<BttResponse>(`https://btt-bo.herokuapp.com/speaker`);
   }
 
 }

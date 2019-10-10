@@ -1,6 +1,7 @@
 {
     "speakers": "Conférenciers",
     "btt": "# Black Tech Twitter",
+    "title":"Tweets et Conféreincies Noirs",
     "jobs": "Offre d'emploi",
     "conf": "Conférences Tech",
     "tweets": "Tweets",
@@ -10,5 +11,6 @@
     "next":"Suivant",
     "profile": "Profile",
     "nospeakers":"Il n'y a pas de conférenciers dans cette région.",
+    "repo":"Dépot Git",
     "search": "Recherche"
 }

@@ -8,6 +8,7 @@
     "build-aot": "ng build --aot",
     "test": "ng test",
     "lint": "ng lint",
+    "stats": "webpack-bundle-analyzer dist/black-tech-twitter/stats-es2015.json",
     "e2e": "ng e2e"
   },
   "private": false,

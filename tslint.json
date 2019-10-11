@@ -11,7 +11,9 @@
     },
     "import-blacklist": [
       true,
-      "rxjs/Rx"
+      "rxjs/Rx",
+      "@amcharts",
+      "pdfmake"
     ],
     "interface-name": false,
     "max-classes-per-file": false,

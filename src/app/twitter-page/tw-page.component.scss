@@ -55,51 +55,6 @@
     }
 }
 
-.scroll-up {
-    position: fixed;
-    right: 0;
-    bottom: 2.5rem;
-    z-index: 1035;
-    right: 1.25%;
-    bottom: .25rem;
-    border-radius: 1rem;
-    background-color: #343a40 !important;
-    transition: 0.70s;
-    -webkit-transition: 0.70s;
-    -moz-transition: 0.70s;
-    -ms-transition: 0.70s;
-    -o-transition: 0.70s;
-}
-
-.scroll-up:hover {
-    transition: 0.70s;
-    -webkit-transition: 0.70s;
-    -moz-transition: 0.70s;
-    -ms-transition: 0.70s;
-    -o-transition: 0.70s;
-    -webkit-transform: rotate(360deg);
-    -moz-transform: rotate(360deg);
-    -o-transform: rotate(360deg);
-    -ms-transform: rotate(360deg);
-    transform: rotate(360deg);
-}
-
-.scroll-up-icon {
-    display: inline-block;
-    width: 1.5em;
-    height: 1.5em;
-    vertical-align: middle;
-    content: "";
-    background: no-repeat center center;
-    background-size: 100% 100%;
-}
-
-$dark-bg: rgba(#fff, .5);
-
-.scroll-up-icon {
-    background-image: url("data:image/svg+xml,%3csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3e%3cpath stroke='#{$dark-bg}' stroke-width='3' stroke-linecap='round' stroke-miterlimit='10' d='M10 10L15 1 M15 1L20 10 M15 1L15 20'/%3e%3c/svg%3e");
-}
-
 hr {
     border-top: 1px solid white !important;
 }

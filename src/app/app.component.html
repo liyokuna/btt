@@ -15,9 +15,36 @@
       <li class="nav-item">
         <a class="nav-link" href="https://github.com/liyokuna/btt">{{ 'repo' | translate }}</a>
       </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#" data-toggle="modal" data-target="#creditModal">{{ 'credit' | translate }}</a>
+      </li>
     </ul>
   </div>
 </nav>
 </header>
 
 <router-outlet></router-outlet>
+
+<!-- Modal -->
+<div class="modal fade" id="creditModal" tabindex="-1" role="dialog" aria-labelledby="creditModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="creditModalLabel">{{ 'credit' | translate }}</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <ul>
+          <li>
+              Thanks to <a class="link" href="https://twitter.com/samanthabretous">Samantha Bretous</a> for the <a class="link" href="https://github.com/samanthabretous/black-speakers-in-tech">speakers repo</a>.
+          </li>
+        </ul>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>

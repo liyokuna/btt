@@ -1,6 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { TranslateService } from '@ngx-translate/core';
-import { HttpClient, HttpHeaders } from '@angular/common/http';
+import { HttpClient } from '@angular/common/http';
 import { TwitterService } from './services/twitter-service.service';
 
 @Component({
@@ -8,7 +8,7 @@ import { TwitterService } from './services/twitter-service.service';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
-export class AppComponent {
+export class AppComponent implements OnInit {
   title = 'Btt';
   click: boolean;
   constructor(translate: TranslateService, private http: HttpClient, private ttservice: TwitterService) {
@@ -16,6 +16,13 @@ export class AppComponent {
     translate.use('en');
     this.click = false;
   }
+
+  ngOnInit() {
+    this.ttservice.getRepo().subscribe((res)=>{
+      console.info('repo available');
+    })
+  }
+
   ToggleClass() {
     this.click = ! this.click;
   }

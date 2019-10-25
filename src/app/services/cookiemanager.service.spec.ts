@@ -3,17 +3,19 @@ import { TestBed } from '@angular/core/testing';
 import { CookiemanagerService } from './cookiemanager.service';
 
 describe('CookiemanagerService', () => {
-  const service: CookiemanagerService = TestBed.get(CookiemanagerService);
-  beforeEach(() => TestBed.configureTestingModule({}));
+
+
+  let service: CookiemanagerService;
+  beforeEach(() => {service = new CookiemanagerService(); });
 
   it('should be created', () => {
-    expect(this.service).toBeTruthy();
+    expect(service).toBeTruthy();
   });
 
   it('#getCookie should return a boolean value', () => {
-    this.service.setCookie('test', true, 'localhost');
+    service.setCookieWithString('test', 'true', 'localhost');
 
-    expect(this.service.getCookie('test')).toBeTruthy();
+    expect(service.getCookie('test')).toBeTruthy();
   });
 
   it('#getCookie should return a undefined value after deleting stringtest cookie', () => {

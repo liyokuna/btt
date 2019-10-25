@@ -14,15 +14,15 @@ export class AppComponent implements OnInit {
   click: boolean;
   langSaved;
   constructor(private translate: TranslateService, private http: HttpClient,
-     private ttservice: TwitterService, private cookiemanager: CookiemanagerService) {
+              private ttservice: TwitterService, private cookiemanager: CookiemanagerService) {
     translate.setDefaultLang('en');
     this.click = false;
   }
 
   ngOnInit() {
     this.langSaved = this.cookiemanager.getCookie('lang');
-    this.ttservice.getRepo().subscribe((res)=> {
-      console.info('repo available');
+    this.ttservice.getRepo().subscribe((res) => {
+      console.log('repo available');
     });
     if (this.langSaved) {
       this.translate.use(this.langSaved);

@@ -12,6 +12,14 @@
     "next":"Suivant",
     "profile": "Profile",
     "nospeakers":"Il n'y a pas de conférenciers dans cette région.",
+    "register-as-speaker":"Enregistrer vous en soumettant votre nom par ",
+    "here":"ici",
     "repo":"Dépot Git",
+    "for-the":" pour le",
+    "thanks-to":"Merçi à ",
+    "made-by":"Fait avec Amour par ",
+    "language": "Langues",
+    "english": "Anglais",
+    "french": "Français",
     "search": "Recherche"
 }

@@ -14,6 +14,7 @@ import { HomeComponent } from './home/home.component';
 import { TwPageComponent } from './twitter-page/tw-page.component';
 import { TwitterService } from './services/twitter-service.service';
 import { SpeakersComponent } from './speakers/speakers.component';
+import { CookiemanagerService } from './services/cookiemanager.service';
 
 // AoT requires an exported function for factories
 export function HttpLoaderFactory(http: HttpClient) {
@@ -40,7 +41,7 @@ export function HttpLoaderFactory(http: HttpClient) {
     }),
     NgbModule,
   ],
-  providers: [TwitterService],
+  providers: [TwitterService, CookiemanagerService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -15,6 +15,13 @@
       <li class="nav-item">
         <a class="nav-link" href="https://github.com/liyokuna/btt">{{ 'repo' | translate }}</a>
       </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link uppercase-text dropdown-toggle" href="#" id="dropdownLanguageLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">{{ 'language' | translate }}</a>
+        <div class="dropdown-menu bg-dark" aria-labelledby="dropdownLanguageLink">
+          <a [ngClass]="langSaved ==='en' ? 'dropdown-item active' : 'dropdown-item'" (click)="setLanguage('en')" href="#">{{ 'english' | translate }}</a>
+          <a [ngClass]="langSaved ==='fr' ? 'dropdown-item active' : 'dropdown-item'" (click)="setLanguage('fr')" href="#">{{ 'french' | translate }}</a>
+        </div>
+      </li>
       <li class="nav-item">
         <a class="nav-link" href="#" data-toggle="modal" data-target="#creditModal">{{ 'credit' | translate }}</a>
       </li>
@@ -38,7 +45,13 @@
       <div class="modal-body">
         <ul>
           <li>
-              Thanks to <a class="link" href="https://twitter.com/samanthabretous" rel="author">Samantha Bretous</a> for the <a class="link" href="https://github.com/samanthabretous/black-speakers-in-tech" rel="external">speakers repo</a>.
+            {{ 'thanks-to' | translate }}<a class='link' href='https://www.samanthabretous.com/' rel='author'>Samantha Bretous</a>{{'for-the' | translate}} <a class='link' href='https://github.com/samanthabretous/black-speakers-in-tech' rel='external'>{{ 'speakers' | translate }} {{ 'git' | translate }}</a>.
+          </li>
+          <li>
+            {{ 'thanks-to' | translate }}<a class='link' href='https://twitter.com/ParissAthena' rel='author'>Pariss Ahtena</a>{{'for-the' | translate}} <a class='link' href='https://twitter.com/search?q=%23BlackTechTwitter' rel='external'>#BlackTechTwitter</a>.
+          </li>
+          <li>
+            {{ 'made-by' | translate }}<a class='link' href='https://liyokuna.github.io/' rel='author'>Lionel Mukuna Ciowela</a>.
           </li>
         </ul>
       </div>

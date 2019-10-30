@@ -35,7 +35,7 @@ export class AppComponent implements OnInit {
 
   setLanguage(language: string) {
     this.translate.use(language);
-    this.cookiemanager.setCookieWithString('lang', language, 'localhost');
+    this.cookiemanager.setCookieWithString('lang', language, 'https://btt.netlify.com/');
     this.langSaved = language;
   }
 }

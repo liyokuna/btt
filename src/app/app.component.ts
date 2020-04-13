@@ -13,6 +13,7 @@ import { Subscription } from 'rxjs';
 })
 export class AppComponent implements OnInit {
   title = 'Btt';
+  domain = 'https://btt.netlify.com/';
   click: boolean;
   langSaved;
   path_logo: string;
@@ -29,7 +30,7 @@ export class AppComponent implements OnInit {
   ngOnInit() {
     this.langSaved = this.cookiemanager.getCookie('lang');
     this.ttserviceSubscription = this.ttservice.getRepo().subscribe((res) => {
-      console.log('repo available');
+      console.log('repo available'+ res);
     });
     if (this.langSaved) {
       this.translate.use(this.langSaved);
@@ -42,7 +43,7 @@ export class AppComponent implements OnInit {
 
   setLanguage(language: string) {
     this.translate.use(language);
-    this.cookiemanager.setCookieWithString('lang', language, 'https://btt.netlify.com/');
+    this.cookiemanager.setCookieWithString('lang', language, this.domain);
     this.langSaved = language;
   }
 

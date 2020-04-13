@@ -2,6 +2,7 @@ import { Component, OnInit, HostListener } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { FormBuilder, FormGroup } from '@angular/forms';
 import { TwitterService } from '../services/twitter-service.service';
+import { Subscription } from 'rxjs';
 
 @Component({
   selector: 'app-tw-page',
@@ -14,6 +15,7 @@ export class TwPageComponent implements OnInit {
   checkboxGroupForm: FormGroup;
   title = 'Black Tech on Twitter';
   searchQuery = '#BlackTechPipeline';
+  ttserviceSubscription: Subscription;
   tweetsdata: any;
 
   constructor(private http: HttpClient, private ttservice: TwitterService, private formBuilder: FormBuilder) {
@@ -25,7 +27,7 @@ export class TwPageComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.ttservice.search(this.searchQuery).subscribe((res) => {
+    this.ttserviceSubscription = this.ttservice.search(this.searchQuery).subscribe((res) => {
       this.tweetsdata = res.data;
       this.loading = false;
     });
@@ -34,43 +36,43 @@ export class TwPageComponent implements OnInit {
     if ( this.checkboxGroupForm.value.btt && !this.checkboxGroupForm.value.jobs && !this.checkboxGroupForm.value.conf) {
       console.log(this.checkboxGroupForm.value.btt);
       this.searchQuery = '#BlackTechTwitter';
-      this.ttservice.search(this.searchQuery).subscribe((res) => {
+      this.ttserviceSubscription = this.ttservice.search(this.searchQuery).subscribe((res) => {
         this.tweetsdata = res.data;
       });
     }
     if ( this.checkboxGroupForm.value.jobs && !this.checkboxGroupForm.value.btt && !this.checkboxGroupForm.value.conf) {
       this.searchQuery = '#Jobs';
-      this.ttservice.search(this.searchQuery).subscribe((res) => {
+      this.ttserviceSubscription = this.ttservice.search(this.searchQuery).subscribe((res) => {
         this.tweetsdata = res.data;
       });
     }
     if ( this.checkboxGroupForm.value.conf && !this.checkboxGroupForm.value.btt && !this.checkboxGroupForm.value.jobs) {
       this.searchQuery = '#Conference';
-      this.ttservice.search(this.searchQuery).subscribe((res) => {
+      this.ttserviceSubscription = this.ttservice.search(this.searchQuery).subscribe((res) => {
         this.tweetsdata = res.data;
       });
     }
     if ( this.checkboxGroupForm.value.conf && this.checkboxGroupForm.value.jobs && !this.checkboxGroupForm.value.btt) {
       this.searchQuery = '#Conference #Jobs';
-      this.ttservice.search(this.searchQuery).subscribe((res) => {
+      this.ttserviceSubscription = this.ttservice.search(this.searchQuery).subscribe((res) => {
         this.tweetsdata = res.data;
       });
     }
     if ( this.checkboxGroupForm.value.btt && this.checkboxGroupForm.value.jobs && !this.checkboxGroupForm.value.conf) {
       this.searchQuery = '#BlackTechTwitter #Jobs';
-      this.ttservice.search(this.searchQuery).subscribe((res) => {
+      this.ttserviceSubscription = this.ttservice.search(this.searchQuery).subscribe((res) => {
         this.tweetsdata = res.data;
       });
     }
     if ( this.checkboxGroupForm.value.btt && this.checkboxGroupForm.value.conf && !this.checkboxGroupForm.value.jobs) {
       this.searchQuery = '#BlackTechTwitter #Conference';
-      this.ttservice.search(this.searchQuery).subscribe((res) => {
+      this.ttserviceSubscription = this.ttservice.search(this.searchQuery).subscribe((res) => {
         this.tweetsdata = res.data;
       });
     }
     if ( this.checkboxGroupForm.value.btt && this.checkboxGroupForm.value.conf && this.checkboxGroupForm.value.jobs) {
       this.searchQuery = '#BlackTechTwitter #Conference #Jobs';
-      this.ttservice.search(this.searchQuery).subscribe((res) => {
+      this.ttserviceSubscription = this.ttservice.search(this.searchQuery).subscribe((res) => {
         this.tweetsdata = res.data;
       });
     }
@@ -87,5 +89,9 @@ export class TwPageComponent implements OnInit {
     } else {
       this.showScroll = false;
     }
+  }
+
+  ngOnDestroy() {
+    this.ttserviceSubscription.unsubscribe();
   }
 }

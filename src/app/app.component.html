@@ -1,6 +1,9 @@
 <header>
   <nav class="navbar navbar-dark bg-dark">
   <a class="navbar-brand" href="/">{{title}}</a>
+  <a class="logo-page" href="#">
+    <img src="/assets/img/{{path_logo}}.svg" width="30" height="30" alt="{{path_logo}}">
+  </a>
   <button class="navbar-toggler" type="button" (click)= "ToggleClass()" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
     <span [ngClass]="click ? 'navbar-toggler-icon-click' : 'navbar-toggler-icon'"></span>
   </button>

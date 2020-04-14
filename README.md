@@ -1,6 +1,7 @@
 # [BlackTechiesTwitter](https://btt.netlify.com/)
 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/4ccc262a-eb26-4970-8d4f-a98e3d6d67ae/deploy-status)](https://app.netlify.com/sites/btt/deploys)
+[![Build Status](https://travis-ci.org/liyokuna/btt.svg?branch=master)](https://travis-ci.org/liyokuna/btt)
 
 This project is linked to the black tech twitter [post](https://twitter.com/liyokuna/status/1069342369227644929).
 The aim of the project is to display black speakers registered on the [readme](https://github.com/samanthabretous/black-speakers-in-tech) managed by [Samantha Bretous](https://twitter.com/samanthabretous) and also to retrieve tweets that mention black tech twitter or black tech pipeline hashtag.

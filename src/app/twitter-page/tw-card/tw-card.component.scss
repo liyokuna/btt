@@ -1,0 +1,14 @@
+.card {
+    transform: translateY(0px);
+    transition: .5s;
+}
+.card:hover { 
+    transform: translateY(-10px);
+    transition: .5s;
+}
+.col {
+    margin: 0.5rem;
+}
+.card-body {
+    color: #fff;
+}

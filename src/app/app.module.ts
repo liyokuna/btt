@@ -15,6 +15,7 @@ import { TwPageComponent } from './twitter-page/tw-page.component';
 import { TwitterService } from './services/twitter-service.service';
 import { SpeakersComponent } from './speakers/speakers.component';
 import { CookiemanagerService } from './services/cookiemanager.service';
+import { TwCardComponent } from './twitter-page/tw-card/tw-card.component';
 
 // AoT requires an exported function for factories
 export function HttpLoaderFactory(http: HttpClient) {
@@ -24,7 +25,7 @@ export function HttpLoaderFactory(http: HttpClient) {
 
 @NgModule({
   declarations: [
-    AppComponent, TwPageComponent, HomeComponent, SpeakersComponent
+    AppComponent, TwPageComponent, HomeComponent, SpeakersComponent, TwCardComponent
   ],
   imports: [
     BrowserModule,

@@ -34,11 +34,11 @@ describe('TwCardComponent', () => {
     fixture = TestBed.createComponent(TwCardComponent);
     component = fixture.componentInstance;
     component.item = {
-      'text':'text',
-      'user': {
-        'name':'name',
-        'screen_name':'screen_name',
-        'profile_image_url':'home'
+      text: 'text',
+      user: {
+        name: 'name',
+        screen_name: 'screen_name',
+        profile_image_url: 'home'
       },
     };
     fixture.detectChanges();

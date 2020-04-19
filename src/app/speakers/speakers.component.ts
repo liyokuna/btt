@@ -1,5 +1,6 @@
-import { Component, NgZone, OnDestroy, AfterViewInit } from '@angular/core';
+import { Component, NgZone, OnDestroy, AfterViewInit, OnInit } from '@angular/core';
 import { TwitterService } from '../services/twitter-service.service';
+import { Title } from '@angular/platform-browser';
 import * as am4core from '@amcharts/amcharts4/core';
 import * as am4maps from '@amcharts/amcharts4/maps';
 import am4geodata_worldLow from '@amcharts/amcharts4-geodata/worldLow';
@@ -17,11 +18,16 @@ am4core.useTheme(am4themes_animated);
   styleUrls: ['./speakers.component.scss']
 })
 
-export class SpeakersComponent implements OnDestroy, AfterViewInit {
+export class SpeakersComponent implements OnInit, OnDestroy, AfterViewInit {
 
   private chart: am4maps.MapChart;
   public retrieves: any;
-  constructor(private ttservice: TwitterService, private zone: NgZone) { }
+  titlePage = '- Speakers Maps';
+  constructor(private ttservice: TwitterService, private zone: NgZone, private title: Title) { }
+
+  ngOnInit() {
+    this.title.setTitle(this.title.getTitle() + this.titlePage);
+  }
 
   ngAfterViewInit() {
     this.zone.runOutsideAngular(() => {

@@ -1,18 +1,3 @@
-.card {
-    transform: translateY(0px);
-    transition: .5s;
-}
-.card:hover { 
-    transform: translateY(-10px);
-    transition: .5s;
-}
-.col {
-    margin: 0.5rem;
-}
-.card-body {
-    color: #fff;
-}
-
 .spinner {
     width: 40px;
     height: 40px;
@@ -57,4 +42,30 @@
 
 hr {
     border-top: 1px solid white !important;
+}
+
+.spinner-container-2 {
+    display: flex;
+    margin-top: 50px;
+}
+  
+.spinner-2 {
+    width: 2.5rem;
+    height: 2.5rem;
+    border-top-color: #343a40;
+    border-left-color: #343a40;
+
+    animation: spinner-2 400ms linear infinite;
+    -webkit-animation: spinner-2 400ms linear infinite;
+    border-bottom-color: transparent;
+    border-right-color: transparent;
+    border-style: solid;
+    border-width: 4px;
+    border-radius: 50%;
+    margin: auto;
+}
+  
+@keyframes spinner-2 {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
 }

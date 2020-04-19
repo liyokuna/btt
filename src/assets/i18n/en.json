@@ -3,17 +3,17 @@
     "register-as-speaker":"Add your name by submitting it ",
     "here":"here",
     "btt": "# Black Tech Twitter",
-    "credit": "Credit",
+    "credit": "Credits",
     "title":"Black Techies Speakers and Tweets",
     "jobs": "Job Offers",
     "conf": "Tech Conference",
     "tweets": "Tweets",
     "blog":"Blog",
-    "letgettogether": "Empower each other",
+    "letgettogether": "Empower each other.",
     "e-mail": "E-mail address",
     "next":"Next",
     "profile": "Profil",
-    "nospeakers":"There is not a speaker in this region",
+    "nospeakers":"There is not a speaker in this region.",
     "repo":"Repository",
     "for-the":" for the ",
     "thanks-to":"Thanks to ",
@@ -22,5 +22,6 @@
     "language": "Language",
     "english": "English",
     "french": "French",
-    "search": "Search"
+    "search": "Search",
+    "noDataAvailble": "No data available!"
 }

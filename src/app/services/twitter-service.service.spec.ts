@@ -10,13 +10,13 @@ describe('TwitterService', () => {
   })));
 
   it('should be created', () => {
-    const service: TwitterService = TestBed.get(TwitterService);
+    const service: TwitterService = TestBed.inject(TwitterService);
     expect(service).toBeTruthy();
   });
 
   it('should retrieve speakers', () => {
     (done: DoneFn) => {
-      const service: TwitterService = TestBed.get(TwitterService);
+      const service: TwitterService = TestBed.inject(TwitterService);
       service.getSpeakers().subscribe(value => {
         expect(value.success).toBeTruthy();
         done();
@@ -26,7 +26,7 @@ describe('TwitterService', () => {
 
   it('should retrieve tweets', () => {
     (done: DoneFn) => {
-      const service: TwitterService = TestBed.get(TwitterService);
+      const service: TwitterService = TestBed.inject(TwitterService);
       service.search('test').subscribe(value => {
         expect(value.data).toBeTruthy();
         done();

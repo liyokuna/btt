@@ -34,7 +34,8 @@
             ],
             "scripts": [
               "./node_modules/jquery/dist/jquery.min.js",
-              "./node_modules/bootstrap/dist/js/bootstrap.min.js"],
+              "./node_modules/bootstrap/dist/js/bootstrap.min.js"
+            ],
             "es5BrowserSupport": true
           },
           "configurations": {
@@ -145,5 +146,8 @@
       }
     }
   },
-  "defaultProject": "black-tech-twitter"
+  "defaultProject": "black-tech-twitter",
+  "cli": {
+    "analytics": false
+  }
 }

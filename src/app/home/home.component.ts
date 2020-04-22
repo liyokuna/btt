@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
-import { TwitterService } from '../services/twitter-service.service';
+import {Router, NavigationEnd} from '@angular/router';
+
+declare let gtag: Function;
 
 @Component({
   selector: 'app-home',
@@ -9,8 +11,14 @@ import { TwitterService } from '../services/twitter-service.service';
 export class HomeComponent {
   title = 'Black Techies Twitter';
   click: boolean;
-  constructor(private ttservice: TwitterService) {
+  constructor(private router: Router) {
     this.click = false;
+    this.router.events.subscribe(event => {
+      if (event instanceof NavigationEnd) {
+        gtag('set', 'page', event.urlAfterRedirects);
+        gtag('send', 'pageview');
+      }
+    });
   }
 
   focusIn() {

@@ -1,9 +1,12 @@
 import { Component, OnInit, HostListener, OnDestroy } from '@angular/core';
+import {Router, NavigationEnd} from '@angular/router';
 import { HttpClient } from '@angular/common/http';
 import { Title } from '@angular/platform-browser';
 import { FormBuilder, FormGroup } from '@angular/forms';
 import { TwitterService } from '../services/twitter-service.service';
 import { Subscription } from 'rxjs';
+
+declare let gtag: Function;
 
 @Component({
   selector: 'app-tw-page',
@@ -23,12 +26,19 @@ export class TwPageComponent implements OnInit, OnDestroy {
   ttserviceSubscription: Subscription;
   tweetsdata: any[] = [];
 
-  constructor(private http: HttpClient, private ttservice: TwitterService, private formBuilder: FormBuilder, private title: Title) {
-    this.checkboxGroupForm = this.formBuilder.group({
-      btt: true,
-      jobs: false,
-      conf: false
-    });
+  constructor(private http: HttpClient, private ttservice: TwitterService, private formBuilder: FormBuilder, private title: Title,
+    private router: Router) {
+      this.router.events.subscribe(event => {
+        if (event instanceof NavigationEnd) {
+          gtag('set', 'page', event.urlAfterRedirects);
+          gtag('send', 'pageview');
+        }
+      });
+      this.checkboxGroupForm = this.formBuilder.group({
+        btt: true,
+        jobs: false,
+        conf: false
+      });
   }
 
   ngOnInit() {

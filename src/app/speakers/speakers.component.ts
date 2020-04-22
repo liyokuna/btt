@@ -1,11 +1,14 @@
 import { Component, NgZone, OnDestroy, AfterViewInit, OnInit } from '@angular/core';
 import { TwitterService } from '../services/twitter-service.service';
+import { Router, NavigationEnd } from '@angular/router';
 import { Title } from '@angular/platform-browser';
 import * as am4core from '@amcharts/amcharts4/core';
 import * as am4maps from '@amcharts/amcharts4/maps';
 import am4geodata_worldLow from '@amcharts/amcharts4-geodata/worldLow';
 import am4themes_dataviz from '@amcharts/amcharts4/themes/dataviz.js';
 import am4themes_animated from '@amcharts/amcharts4/themes/animated';
+
+declare let gtag: Function;
 
 // Themes begin
 am4core.useTheme(am4themes_dataviz);
@@ -23,7 +26,14 @@ export class SpeakersComponent implements OnInit, OnDestroy, AfterViewInit {
   private chart: am4maps.MapChart;
   public retrieves: any;
   titlePage = '- Speakers Maps';
-  constructor(private ttservice: TwitterService, private zone: NgZone, private title: Title) { }
+  constructor(private ttservice: TwitterService, private zone: NgZone, private title: Title, private router: Router) {
+    this.router.events.subscribe(event => {
+      if (event instanceof NavigationEnd) {
+        gtag('set', 'page', event.urlAfterRedirects);
+        gtag('send', 'pageview');
+      }
+    });
+   }
 
   ngOnInit() {
     this.title.setTitle(this.title.getTitle() + this.titlePage);

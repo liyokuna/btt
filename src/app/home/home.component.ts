@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
-import {Router, NavigationEnd} from '@angular/router';
+import { Router, NavigationEnd } from '@angular/router';
 
-declare let gtag: Function;
+declare let gtag;
 
 @Component({
   selector: 'app-home',

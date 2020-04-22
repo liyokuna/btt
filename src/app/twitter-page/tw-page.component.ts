@@ -1,12 +1,12 @@
 import { Component, OnInit, HostListener, OnDestroy } from '@angular/core';
-import {Router, NavigationEnd} from '@angular/router';
+import { Router, NavigationEnd } from '@angular/router';
 import { HttpClient } from '@angular/common/http';
 import { Title } from '@angular/platform-browser';
 import { FormBuilder, FormGroup } from '@angular/forms';
 import { TwitterService } from '../services/twitter-service.service';
 import { Subscription } from 'rxjs';
 
-declare let gtag: Function;
+declare let gtag;
 
 @Component({
   selector: 'app-tw-page',

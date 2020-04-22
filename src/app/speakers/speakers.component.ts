@@ -8,7 +8,7 @@ import am4geodata_worldLow from '@amcharts/amcharts4-geodata/worldLow';
 import am4themes_dataviz from '@amcharts/amcharts4/themes/dataviz.js';
 import am4themes_animated from '@amcharts/amcharts4/themes/animated';
 
-declare let gtag: Function;
+declare let gtag;
 
 // Themes begin
 am4core.useTheme(am4themes_dataviz);

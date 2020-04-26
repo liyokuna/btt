@@ -3,6 +3,7 @@ import { TranslateModule, TranslateLoader } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { HttpClientModule, HttpClient} from '@angular/common/http';
 import { SpeakersComponent } from './speakers.component';
+import { RouterModule } from '@angular/router';
 
 // AoT requires an exported function for factories
 export function HttpLoaderFactory(http: HttpClient) {
@@ -16,6 +17,7 @@ describe('SpeakersComponent', () => {
   beforeEach(async(() => {
     TestBed.configureTestingModule({
       imports: [
+        RouterModule.forRoot([]),
         HttpClientModule,
         TranslateModule.forRoot({
           loader: {

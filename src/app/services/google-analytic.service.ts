@@ -14,10 +14,10 @@ export class GoogleAnalyticService {
     eventLabel: string = null,
     eventValue: number = null) {
       gtag('send', 'event', {
-      eventCategory: eventCategory,
-      eventLabel: eventLabel,
-      eventAction: eventAction,
-      eventValue: eventValue
+      eventCategory,
+      eventLabel,
+      eventAction,
+      eventValue
       });
     }
 }

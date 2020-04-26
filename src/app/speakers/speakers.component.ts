@@ -88,7 +88,7 @@ export class SpeakersComponent implements OnInit, OnDestroy, AfterViewInit {
   }
 
   SendRegisterEvent() {
-    this.googleAnalyticsService.eventEmitter("speakerPage", "register", "gitBlackSpeaker", 1);
+    this.googleAnalyticsService.eventEmitter('speakerPage', 'register', 'gitBlackSpeaker', 1);
   }
 
   ngOnDestroy() {

@@ -16,7 +16,7 @@ export class TwCardComponent implements OnInit {
   }
 
   SendProfileEvent(tag: string) {
-    this.googleAnalyticsService.eventEmitter("twitter-page", "profile", tag, 1);
+    this.googleAnalyticsService.eventEmitter('twitter-page', 'profile', tag, 1);
   }
 
 }

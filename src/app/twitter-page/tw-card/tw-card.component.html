@@ -7,7 +7,7 @@
             {{item.text}}
         </p>
         <div class="card-action">
-            <a href="https://twitter.com/{{item.user.screen_name}}" class="btn btn-info">{{ 'profile' | translate }}</a>
+            <a href="https://twitter.com/{{item.user.screen_name}}" class="btn btn-info" (click)="SendProfileEvent(item.user.screen_name)">{{ 'profile' | translate }}</a>
         </div>
     </div>
 </div>

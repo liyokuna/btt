@@ -1,5 +1,6 @@
 import { Component, NgZone, OnDestroy, AfterViewInit, OnInit } from '@angular/core';
 import { TwitterService } from '../services/twitter-service.service';
+import { GoogleAnalyticService } from '../services/google-analytic.service';
 import { Router, NavigationEnd } from '@angular/router';
 import { Title } from '@angular/platform-browser';
 import * as am4core from '@amcharts/amcharts4/core';
@@ -26,7 +27,8 @@ export class SpeakersComponent implements OnInit, OnDestroy, AfterViewInit {
   private chart: am4maps.MapChart;
   public retrieves: any;
   titlePage = '- Speakers Maps';
-  constructor(private ttservice: TwitterService, private zone: NgZone, private title: Title, private router: Router) {
+  constructor(private ttservice: TwitterService, private zone: NgZone, private title: Title, private router: Router,
+    private googleAnalyticsService: GoogleAnalyticService) {
     this.router.events.subscribe(event => {
       if (event instanceof NavigationEnd) {
         gtag('set', 'page', event.urlAfterRedirects);
@@ -83,6 +85,10 @@ export class SpeakersComponent implements OnInit, OnDestroy, AfterViewInit {
       });
 
     });
+  }
+
+  SendRegisterEvent() {
+    this.googleAnalyticsService.eventEmitter("speakerPage", "register", "gitBlackSpeaker", 1);
   }
 
   ngOnDestroy() {

@@ -23,6 +23,7 @@
     "@angular/platform-browser": "^9.1.2",
     "@angular/platform-browser-dynamic": "^9.1.2",
     "@angular/router": "^9.1.2",
+    "cookie-service-banner": "^2.0.1",
     "core-js": "^3.6.5",
     "rxjs": "^6.5.5",
     "tslib": "^1.10.0",

@@ -40,6 +40,10 @@ export class AppComponent implements OnInit, OnDestroy {
     this.click = ! this.click;
   }
 
+  onOpen($event) {
+    console.log($event);
+  }
+
   setLanguage(language: string) {
     this.translate.use(language);
     this.cookiemanager.setCookieWithString('lang', language, this.domain);

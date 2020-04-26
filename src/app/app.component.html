@@ -34,6 +34,7 @@
 </header>
 
 <router-outlet></router-outlet>
+<lib-cookie-service (isOpened)="onOpen($event)" ></lib-cookie-service>
 
 <!-- Modal -->
 <div class="modal fade" id="creditModal" tabindex="-1" role="dialog" aria-labelledby="creditModalLabel" aria-hidden="true">
